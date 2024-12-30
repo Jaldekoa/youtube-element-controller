@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Element Controller",
+    "version": "1.0",
+    "description": "Control visibility of YouTube elements",
+    "permissions": ["activeTab", "storage"],
+    "icons": {
+        "128": "icon.png"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [{
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content-script.js"]
+    }]
+  }
